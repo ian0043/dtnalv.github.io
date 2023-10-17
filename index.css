@@ -1,159 +1,164 @@
 body {
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 10pt;
-    background: #f8f8f8;
-    padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 10pt;
+  background: #f8f8f8;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 15px 0;
+  }
+}
+
+.cv-container {
+  background: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.contact-details h1 {
+  margin: 0;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.contact-details p {
+  margin: 5px 0;
+}
+
+section:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.duration {
+  font-weight: normal;
+  font-style: italic;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+section:last-child ul,
+section:last-child .activity {
+  margin-bottom: 0;
+}
+
+.job,
+.school,
+.activity {
+  margin-bottom: 15px;
+}
+
+.location {
+  float: right;
+}
+
+.header-link,
+.heading-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.external-link {
+  color: inherit;
+  text-decoration: none;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(23, 23, 23)),
+    linear-gradient(
+      to right,
+      rgba(218, 146, 68, 1),
+      rgba(218, 146, 68, 1),
+      rgba(218, 146, 68, 1)
+    );
+  background-size: 100% 1.5px, 0 1.5px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.external-link:hover {
+  background-size: 0 1.5px, 100% 1.5px;
+}
+
+.inline-skills {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inline-skills li {
+  display: inline;
+  margin-right: 5px;
+}
+
+.inline-skills li:not(:last-child)::after {
+  content: ", ";
+}
+
+.inline-skills li:last-child::after {
+  content: ".";
+}
+
+.skills::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media print {
+  body {
     margin: 0;
+    background-color: #ffffff;
   }
-  
-  @media (min-width: 768px) {
-    body {
-      margin: 15px 0;
-    }
-  }
-  
+
   .cv-container {
-    background: #ffffff;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    width: 100%;
+    padding-top: 0;
   }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+
+  @page {
+    margin: 20mm;
   }
-  
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
+
+  .no-break {
+    page-break-inside: avoid;
   }
-  
-  .contact-details h1 {
-    margin: 0;
-    font-size: 35px;
-    text-transform: uppercase;
-  }
-  
-  .contact-details p {
-    margin: 5px 0;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-  }
-  
-  h3 {
-    font-size: 15px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
-  
-  h4 {
-    font-style: italic;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  
-  .duration {
-    font-weight: normal;
-    font-style: italic;
-  }
-  
-  ul {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  
-  .job,
-  .school,
-  .activity {
-    margin-bottom: 15px;
-  }
-  
-  .location {
-    float: right;
-  }
-  
-  .header-link,
-  .heading-link {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .external-link {
-    color: inherit;
-    text-decoration: none;
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(23, 23, 23)),
-      linear-gradient(
-        to right,
-        rgba(218, 146, 68, 1),
-        rgba(218, 146, 68, 1),
-        rgba(218, 146, 68, 1)
-      );
-    background-size: 100% 1.5px, 0 1.5px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms;
-  }
-  
-  .external-link:hover {
-    background-size: 0 1.5px, 100% 1.5px;
-  }
-  
-  .inline-skills {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .inline-skills li {
-    display: inline;
-    margin-right: 5px;
-  }
-  
-  .inline-skills li:not(:last-child)::after {
-    content: ", ";
-  }
-  
-  .inline-skills li:last-child::after {
-    content: ".";
-  }
-  
-  .skills::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  @media print {
-    body {
-      margin: 0;
-      background-color: #ffffff;
-    }
-  
-    .cv-container {
-      box-shadow: none;
-      width: 100%;
-      padding-top: 0;
-    }
-  
-    @page {
-      margin: 20mm;
-    }
-  
-    .no-break {
-      page-break-inside: avoid;
-    }
-  }
+}
