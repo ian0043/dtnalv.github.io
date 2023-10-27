@@ -43,6 +43,11 @@ body {
   margin: 5px 0;
 }
 
+.contact-details svg {
+  width: 20px;
+  height: 10px;
+}
+
 section:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -65,9 +70,38 @@ h4 {
   margin-bottom: 5px;
 }
 
+.certifications h4 {
+  font-weight: normal;
+  font-style: normal;
+}
+
+.certifications span {
+  font-style: normal;
+}
+
+.certifications ul h3 {
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.certifications span .external-link {
+  background: none;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.certifications span .duration {
+  font-weight: 600;
+}
+
 .duration {
   font-weight: normal;
-  font-style: italic;
+  font-style: italic !important;
+}
+
+.divider {
+  font-style: normal !important;
 }
 
 ul {
